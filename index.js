@@ -6,6 +6,8 @@
     2. add event
 */
 const grid = document.querySelector('.grid');
+const btnErase = document.querySelector('.btnErase');
+
 const num = 16;
 let color = prompt('Chose color');
 
@@ -22,8 +24,12 @@ for(let i = 0; i < num; i++){
         col.append(cell);
         cell.addEventListener('mouseover', function(){
             cell.style.backgroundColor = color;
+            cell.className += ' colored';
         });
+        
 
         console.log('creating row ' + j)
     }  
 }
+
+btnErase.addEventListener('click', () => document.querySelector('.colored').style.backgroundColor = 'white');
