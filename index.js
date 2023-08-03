@@ -7,6 +7,7 @@
 */
 const grid = document.querySelector('.grid');
 const num = 16;
+let color = prompt('Chose color');
 
 for(let i = 0; i < num; i++){
     const col = document.createElement('div');
@@ -19,8 +20,10 @@ for(let i = 0; i < num; i++){
         const cell = document.createElement('div');
         cell.className = 'cell';
         col.append(cell);
+        cell.addEventListener('mouseover', function(){
+            cell.style.backgroundColor = color;
+        });
 
         console.log('creating row ' + j)
-    }
-    
+    }  
 }
