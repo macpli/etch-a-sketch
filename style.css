@@ -24,6 +24,12 @@ body {
     flex-wrap: wrap;
 }
 
+.ui{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .col{
    flex: 1;
 }
@@ -33,4 +39,8 @@ body {
     margin: 0px;
     flex: 1;
     padding: 20px;
+}
+
+.erase {
+    background-color: white;
 }
