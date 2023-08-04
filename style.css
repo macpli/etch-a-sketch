@@ -1,11 +1,18 @@
 body {
     background-color: beige;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0;
     padding: 0;
 
+}
+
+.title {
+    font-weight: bold;
+    font-size: 48px;
+    margin-top: 30px    ;
 }
 
 .mainWrapper {
