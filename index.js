@@ -1,7 +1,7 @@
 // UI
 const grid = document.querySelector('.grid');
 const btnErase = document.querySelector('.btnErase');
-const num = 16;
+const num = 20;
 
 let color = document.getElementById('colorChoice');
 color.addEventListener('input', getColor)

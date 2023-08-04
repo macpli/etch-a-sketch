@@ -15,10 +15,8 @@ body {
 }
 
 .grid {
-    margin: 0;
-    
+    margin: 0;  
     display: flex;
-    
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -30,17 +28,8 @@ body {
     gap: 15px;
 }
 
-.col{
-   flex: 1;
-}
-
 .cell {
     background-color: white;
     margin: 0px;
-    flex: 1;
     padding: 20px;
-}
-
-.erase {
-    background-color: white;
 }
