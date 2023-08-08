@@ -1,12 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
 body {
-    background-color: beige;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: #e6e9ed;
+    
     margin: 0;
     padding: 0;
 
+}
+
+.mainWrapper {
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .title {
@@ -15,7 +28,7 @@ body {
     margin-top: 30px    ;
 }
 
-.mainWrapper {
+.gridWrapper {
     display: flex;
     margin-top: 30px;
     gap: 30px;
@@ -27,6 +40,14 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    box-shadow: 0 28px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+
+.cell {
+    background-color: white;
+    margin: 0px;
+    padding: 20px;
 }
 
 .ui{
@@ -35,8 +56,65 @@ body {
     gap: 15px;
 }
 
-.cell {
-    background-color: white;
-    margin: 0px;
-    padding: 20px;
+.colorCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 225px;
+    padding: 0;
+    margin: 0;
+    border-radius: 8px 8px 8px 8px;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.22);
+}
+
+.colorCardTxt {
+    font-size: 28px;
+    margin-top: 0.5em;
+}
+
+.colorPicker {
+    appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  height: 12em;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  
+  ::-webkit-color-swatch{
+    border: 0;
+    border-radius: 0 0 8px 8px;
+  }
+
+.btnErase {
+    padding: 0.75em;
+    border: 0;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.22);
+    border-radius: 8px;
+    font-size: 24px;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+  
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px 30px 0 0;
+    box-shadow: 0 10px 10px 5px  rgba(0,0,0,0.22);
+    background-color: whitesmoke;
+    padding-top: 10px;
+    width: 100%;
+    color: rgba(0,0,0,0.22);
 }
