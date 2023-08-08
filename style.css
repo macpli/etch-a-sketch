@@ -7,14 +7,9 @@
 
 body {
     background-color: #e6e9ed;
-    
-    margin: 0;
-    padding: 0;
-
 }
 
 .mainWrapper {
-
     height: 100vh;
     display: flex;
     flex-direction: column;
