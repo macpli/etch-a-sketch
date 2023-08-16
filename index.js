@@ -1,8 +1,5 @@
 // --UI--
 const ui = document.querySelector('.ui');
-// Grid Setup
-const grid = document.querySelector('.grid');
-const cellCount = 32;
 
 // Buttons
 const btnErase = document.createElement('button');
@@ -20,31 +17,40 @@ let color = document.getElementById('colorChoice');
 color.addEventListener('input', getColor);
 //----
 
-// Grid Generation
-for (let i = 0; i < cellCount * cellCount; i++) {
-    // 
-    const cell = document.createElement('div');
-    cell.className = 'cell';
-    grid.append(cell);
-    cell.addEventListener('mouseover', function () {
-        cell.style.backgroundColor = color;
-        cell.className += ' colored';
-    });
+// --Functions--
+// Generate Grid
+function generateGrid() {
+    const grid = document.querySelector('.grid');
+    grid.innerHTML = ""; // this clears the previous grid
+    const cellCount = parseInt(document.getElementById('cellCount').value);
 
+    // Custom CSS property
     grid.style.setProperty('--cell-count', cellCount);
 
+    for (let i = 0; i < cellCount * cellCount; i++) {
+        // Generate Cells 
+        console.log("cellCount = " + cellCount);
+        const cell = document.createElement('div');
+        cell.classList.add('cell');
+        grid.appendChild(cell);
+        cell.addEventListener('mouseover', function () {
+            cell.style.backgroundColor = color;
+            cell.className += ' colored';
+        });
+    }
+    console.log('in generateGrid');
 }
 
-// --Functions--
 // Get Color
-function getColor(){
+function getColor() {
     let userInput = document.getElementById('colorChoice').value;
     return color = userInput;
 }
 
 // Erase All
 btnErase.addEventListener('click', Erase);
-function Erase(){
+
+function Erase() {
     const coloredCells = document.querySelectorAll('.cell.colored')
     coloredCells.forEach(cell => {
         cell.className = 'cell';
@@ -55,7 +61,10 @@ function Erase(){
 
 // Eraser
 btnEraser.addEventListener('click', Eraser);
-function Eraser(){
+
+function Eraser() {
     return color = 'white';
 }
 //----
+
+generateGrid();
