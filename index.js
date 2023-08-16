@@ -1,13 +1,28 @@
-// UI
+// --UI--
+const ui = document.querySelector('.ui');
+// Grid Setup
 const grid = document.querySelector('.grid');
-const btnErase = document.querySelector('.btnErase');
 const num = 20;
 
-let color = document.getElementById('colorChoice');
-color.addEventListener('input', getColor)
-//
+// Buttons
+const btnErase = document.createElement('button');
+btnErase.className = ('btn btnErase');
+btnErase.textContent = 'Erase';
+ui.append(btnErase);
 
-// Grid generation
+const btnEraser = document.createElement('button');
+btnEraser.className = ('btn btnEraser');
+btnEraser.textContent = 'Eraser';
+ui.append(btnEraser);
+
+// Color Input
+let color = document.getElementById('colorChoice');
+color.addEventListener('input', getColor);
+//----
+
+// Grid Generation
+
+
 for (let i = 0; i < num; i++) {
     // creating collumns
     const col = document.createElement('div');
@@ -27,15 +42,15 @@ for (let i = 0; i < num; i++) {
     }
 }
 
-
-// Erase feature
-btnErase.addEventListener('click', Erase);
-
+// --Functions--
+// Get Color
 function getColor(){
     let userInput = document.getElementById('colorChoice').value;
     return color = userInput;
 }
 
+// Erase All
+btnErase.addEventListener('click', Erase);
 function Erase(){
     const coloredCells = document.querySelectorAll('.cell.colored')
     coloredCells.forEach(cell => {
@@ -44,3 +59,11 @@ function Erase(){
     });
     return;
 }
+
+// Eraser
+btnEraser.addEventListener('click', Eraser);
+function Eraser(){
+    console.log('in Eraser');
+    return color = 'white';
+}
+//----
