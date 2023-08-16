@@ -2,7 +2,7 @@
 const ui = document.querySelector('.ui');
 // Grid Setup
 const grid = document.querySelector('.grid');
-const num = 20;
+const cellCount = 32;
 
 // Buttons
 const btnErase = document.createElement('button');
@@ -21,25 +21,18 @@ color.addEventListener('input', getColor);
 //----
 
 // Grid Generation
+for (let i = 0; i < cellCount * cellCount; i++) {
+    // 
+    const cell = document.createElement('div');
+    cell.className = 'cell';
+    grid.append(cell);
+    cell.addEventListener('mouseover', function () {
+        cell.style.backgroundColor = color;
+        cell.className += ' colored';
+    });
 
+    grid.style.setProperty('--cell-count', cellCount);
 
-for (let i = 0; i < num; i++) {
-    // creating collumns
-    const col = document.createElement('div');
-    grid.append(col);
-    col.className = 'col';
-
-    for (let j = 0; j < num; j++) {
-        // filling the collumns with rows (cells)
-        const cell = document.createElement('div');
-        cell.className = 'cell';
-        col.append(cell);
-        // adding event listener for coloring to every cell
-        cell.addEventListener('mouseover', function () {
-            cell.style.backgroundColor = color;
-            cell.className += ' colored';
-        });
-    }
 }
 
 // --Functions--
@@ -63,7 +56,6 @@ function Erase(){
 // Eraser
 btnEraser.addEventListener('click', Eraser);
 function Eraser(){
-    console.log('in Eraser');
     return color = 'white';
 }
 //----
