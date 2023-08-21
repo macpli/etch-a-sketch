@@ -3,7 +3,8 @@
 <img src= 'demo.png'></img><br>
 
 ## Description
-Well-known Etch A Sketch drawing toy replicated in JavaScript.
+Well-known Etch A Sketch drawing toy replicated in JavaScript. <br>
+Live preview: <a href="https://macpli.github.io/etch-a-sketch/"> Here</a>
 
 # Rules:
 - Choose a color
@@ -14,4 +15,4 @@ Well-known Etch A Sketch drawing toy replicated in JavaScript.
 - Based on real life game:  Etch A Sketch
 
 # State:
-Work in progress
+Finished 
