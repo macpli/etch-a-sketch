@@ -15,6 +15,7 @@ ui.append(btnEraser);
 // Color Input
 let color = document.getElementById('colorChoice');
 color.addEventListener('input', getColor);
+color = 'black';
 //----
 
 // --Functions--
